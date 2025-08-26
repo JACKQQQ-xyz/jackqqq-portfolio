@@ -2,7 +2,7 @@ import Dataimage from "../data";
 
 const Tentang = () => {
   return (
-    <div className="tentang mt-32 py-10">
+    <div className="tentang mt-32 py-10" id="about">
       <div className="xl:w-3/4 w-full mx-auto bg-zinc-800 rounded-lg p-10" data-aos="fade-up">
         <p className="text-base/loose mb-10">
           Saya, Mochammad Dzaky Azzam, pelajar SMK Telkom Malang jurusan RPL

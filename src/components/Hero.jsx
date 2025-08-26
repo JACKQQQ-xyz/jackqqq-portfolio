@@ -3,7 +3,7 @@ import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
   return (
-    <div className="hero grid md:grid-cols-2 items-center md:pt-10 pt-0 xl:gap-0 gap-6 grid-cols-1">
+    <div className="hero grid md:grid-cols-2 items-center md:pt-10 pt-0 xl:gap-0 gap-6 grid-cols-1" id="home">
       <div data-aos="fade-right">
         <div className="flex items-center gap-3 mb-6 bg-zinc-800 w-fit p-4 rounded-2xl">
           <img src={Dataimage.HeroImage} alt="Hero" className="w-10 rounded-md" />

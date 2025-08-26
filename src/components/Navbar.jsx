@@ -11,7 +11,6 @@ const Navbar = () => {
     const handleScroll = () => {
       setActive(window.scrollY > 10);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -26,6 +25,17 @@ const Navbar = () => {
     { name: "Contact", href: "#contact" },
   ];
 
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    const target = document.querySelector(href);
+    if (target) {
+      const offset = 80; // tinggi navbar (sesuaikan)
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: "smooth" });
+      setMenuOpen(false);
+    }
+  };
+
   return (
     <>
       {/* Navbar */}
@@ -36,7 +46,7 @@ const Navbar = () => {
             : "w-full bg-transparent"
         }`}
       >
-        {/* Logo / Name */}
+        {/* Logo */}
         <div className="logo">
           <h1 className="lg:text-3xl text-xl font-bold text-white">
             JACKQQQ<span className="text-yellow-400">_</span>
@@ -50,6 +60,7 @@ const Navbar = () => {
               <a
                 className="font-medium text-white hover:text-yellow-400 transition"
                 href={item.href}
+                onClick={(e) => handleNavClick(e, item.href)}
               >
                 {item.name}
               </a>
@@ -57,7 +68,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Hamburger Button (Mobile Only) */}
+        {/* Hamburger (Mobile Only) */}
         <button
           className="md:hidden text-white"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -82,7 +93,7 @@ const Navbar = () => {
                   <a
                     className="font-medium text-white hover:text-yellow-400 transition"
                     href={item.href}
-                    onClick={() => setMenuOpen(false)}
+                    onClick={(e) => handleNavClick(e, item.href)}
                   >
                     {item.name}
                   </a>
@@ -93,7 +104,7 @@ const Navbar = () => {
         )}
       </AnimatePresence>
 
-      {/* Spacer to prevent content overlap */}
+      {/* Spacer supaya konten gak ketutup navbar */}
       <div className="lg:h-8 h-20"></div>
     </>
   );

@@ -7,6 +7,7 @@ import Hero from "./components/Hero.jsx";
 import Tentang from "./components/Tentang.jsx";
 import Proyek from "./components/Proyek.jsx";
 import Tools from "./components/Tools.jsx";
+import Achievements from "./components/Achievements.jsx";
 
 function App() {
   useEffect(() => {
@@ -20,6 +21,7 @@ function App() {
       <Tentang />
       <Tools/>
       <Proyek />
+      <Achievements/>
     </>
   );
 }

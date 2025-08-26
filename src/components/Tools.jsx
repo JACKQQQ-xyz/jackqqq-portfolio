@@ -2,7 +2,7 @@ import { listTools } from "../data";
 import LoadMore from "./LoadMore";
 
 const Tools = () => (
-  <div className="tools mt-32 text-center">
+  <div className="tools mt-32 text-center" id="skills">
     <h1 className="text-4xl/snug font-bold mb-4" data-aos="fade-up">
       Tools & Skills
     </h1>

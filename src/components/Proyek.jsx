@@ -2,7 +2,7 @@ import { listProyek } from "../data";
 import LoadMore from "./LoadMore";
 
 const Proyek = () => (
-  <div className="proyek mt-16 py-10" id="proyek">
+  <div className="proyek mt-16 py-10" id="projects">
     <h1 className="text-4xl/snug font-bold mb-4 text-center" data-aos="fade-up">
       Projects
     </h1>
@@ -16,7 +16,7 @@ const Proyek = () => (
     </p>
 
     <LoadMore
-      items={listProyek.reverse()}
+      items={[...listProyek].reverse()}
       itemsPerLoad={3}
       gridClassName="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-stretch"
       renderItem={(proyek, index) => (
