@@ -49,7 +49,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="logo">
           <h1 className="lg:text-3xl text-xl font-bold text-white">
-            JACKQQQ<span className="text-yellow-400">_</span>
+            JACKQQQ<span className="text-yellow-400 blinking-cursor">_</span>
           </h1>
         </div>
 
